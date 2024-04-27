@@ -16,6 +16,8 @@ $(document).ready(function () {
     }
   });
 
+  
+
   // fixed header
   $(window).scroll(function () {
     if ($(this).scrollTop() > 100) {
@@ -91,7 +93,35 @@ $(document).ready(function () {
       $(this).removeClass("open");
     }
   });
+    // Listen for changes in the language selector
+    $("#language-select").change(function(event) {
+    const selectedLanguage = event.target.value;
+    loadLanguageFile(selectedLanguage);
+  });
+  
 });
+
+
+function loadLanguageFile(userLanguage) {
+  // Load language file based on user's preferred language
+  fetch(`lang/${userLanguage}.json`)
+  // fetch(`lang/${userLanguage}.json`)
+  .then(response => response.json())
+  .then(data => {
+    // Replace placeholders with translated text
+    document.querySelectorAll('[data-i18n]').forEach(element => {
+    const key = element.getAttribute('data-i18n');
+    if (data[key]) {
+      element.textContent = data[key];
+    }
+    });
+  })
+  .catch(error => console.error('Error loading language file:', error));
+}
+
+
+
+
 
 function lightboxSlideShow() {
   const imgSrc = $(".work-item").eq(index).find("img").attr("data-large");

@@ -8,20 +8,30 @@
 	<script src="https://smtpjs.com/v3/smtp.js"> </script>
 </head>
 <body>
+
 	<header class = "header">
 		<div class = "container">
 			<div class = "row justify-content-between align-items-center">
 				<div class = "brand-name">
+					<select id="language-select">
+						<option value="eng">EN</option>
+						<option value="heb">HE</option>
+						<option value="ru">RU</option>
+						<!-- Add more options for other languages if needed -->
+					</select>
 					<a href="index.html">Juls_Lami_Brows</a>
+					
 				</div>
 				<nav class="nav">
 					<ul>
-						<li><a href="#home">Home</a></li>
-						<li><a href="#about">About</a></li>
-						<li><a href="#services">Services</a></li>
-						<li><a href="#works">Portfolio</a></li>
-						<li><a href="#contact">Contact</a></li>
+						<li><a href="#home" data-i18n="Home">Home</a></li>
+						<li><a href="#about" data-i18n="About">About</a></li>
+						<li><a href="#services" data-i18n="Services">Services</a></li>
+						<li><a href="#works" data-i18n="Portfolio">Portfolio</a></li>
+						<li><a href="#contact" data-i18n="Contact">Contact</a></li>
+						
 					</ul>
+					
 				</nav>	
 			</div>
 
@@ -36,8 +46,8 @@
 		<div class = "container">
 			<div class = "row align-items-center">
 				<div class="home-content">
-					<h4>I'm Juls</h4>
-					<h1>Brows and Eyes Specialist</h1>
+					<h4 data-i18n="I'm Juls">I'm Juls</h4>
+					<h1 data-i18n="Brows and Eyes Specialist">Brows and Eyes Specialist</h1>
 				</div>
 			</div>
 		</div>
@@ -67,13 +77,14 @@
 				<div class="about-content">
 					<div class = "row">
 						<div class="section-title">
-							<h1>About me:</h1>
+							<h1 data-i18n="About me:">About me:</h1>
 						</div>
-						<p>My name is <b>JULS</b>. <br>
-							🖋  I will make a nice mood to your brows and lashes☝️ <br>
-							☘️ Eyebrow Architecture <br>
-							☘️ Eyebrow Coloring Dye/Henna <br>
-							☘️ Lamination of Eyebrows and Eyelashes <br>
+						<p>
+							<span data-i18n="about_me.intro">My name is <b>JULS</b>.</span> <br>
+							🖋 <span data-i18n="about_me.0"> I will make a nice mood to your brows and lashes</span>☝️ <br>
+							☘️ <span data-i18n="about_me.1">Eyebrow Architecture</span> <br>
+							☘️ <span data-i18n="about_me.2">Eyebrow Coloring Dye/Henna</span> <br>
+							☘️ <span data-i18n="about_me.3">Lamination of Eyebrows and Eyelashes </span> <br>
 							</p>
 
 
@@ -95,7 +106,7 @@
 						</div>	
 					</div>
 
-					<a href="#" class="btn btn-01">Contact Me</a>
+					<a href="#" class="btn btn-01" data-i18n="Contact Me">Contact Me</a>
 				</div>
 			</div>
 		</div>
@@ -109,7 +120,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="section-title">
-					<h1>For Your Service</h1>
+					<h1 data-i18n="For Your Service">For Your Service</h1>
 				</div>
 			</div>
 			<div class="row">
@@ -118,7 +129,7 @@
 					<div class="service-item-inner">
 						<img src="img/service/1.jpeg" alt="service">
 						<div class="overlay">
-							<h4>Eyebrow Architecture</h4>
+							<h4 data-i18n="Eyebrow Architecture">Eyebrow Architecture</h4>
 						</div>
 					</div>
 				</div>
@@ -128,7 +139,7 @@
 					<div class="service-item-inner">
 						<img src="img/service/2.jpeg" alt="service">
 						<div class="overlay">
-							<h4>Eyebrow Coloring - <br>Dye/Henna</h4>
+							<h4 data-i18n="Eyebrow Coloring">Eyebrow Coloring - Dye/Henna</h4>
 						</div>
 					</div>
 				</div>
@@ -138,7 +149,7 @@
 					<div class="service-item-inner">
 						<img src="img/about-me.jpg" alt="service">
 						<div class="overlay">
-							<h4>Lamination of Eyebrows and Eyelashes</h4>
+							<h4 data-i18n="Lamination">Lamination of Eyebrows and Eyelashes</h4>
 						</div>
 					</div>
 				</div>
@@ -183,7 +194,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="section-title">
-					<h1>Portfolio</h1>
+					<h1 data-i18n="Portfolio">Portfolio</h1>
 				</div>
 			</div>
 			<div class="row">
@@ -192,7 +203,7 @@
 					<div class="work-item-inner">
 						<img src="img/works/thumb/1.jpeg" data-large="img/works/large/1.jpeg" alt="work">
 						<div class="overlay">
-							<h4>item 0</h4>
+							<h4></h4>
 						</div>
 					</div>
 				</div>
@@ -202,7 +213,7 @@
 					<div class="work-item-inner">
 						<img src="img/works/thumb/2.jpeg" data-large="img/works/large/2.jpeg" alt="work">
 						<div class="overlay">
-							<h4>item 1</h4>
+							<h4></h4>
 						</div>
 					</div>
 				</div>
@@ -212,7 +223,7 @@
 					<div class="work-item-inner">
 						<img src="img/works/thumb/3.jpeg" data-large="img/works/large/3.jpeg" alt="work">
 						<div class="overlay">
-							<h4>item 2</h4>
+							<h4></h4>
 						</div>
 					</div>
 				</div>
@@ -222,7 +233,7 @@
 					<div class="work-item-inner">
 						<img src="img/works/thumb/4.jpeg" data-large="img/works/large/4.jpeg" alt="work">
 						<div class="overlay">
-							<h4>item 3</h4>
+							<h4></h4>
 						</div>
 					</div>
 				</div>
@@ -232,7 +243,7 @@
 					<div class="work-item-inner">
 						<img src="img/works/thumb/5.jpeg" data-large="img/works/large/5.jpeg" alt="work">
 						<div class="overlay">
-							<h4>Wedding Photography</h4>
+							<h4></h4>
 						</div>
 					</div>
 				</div>
@@ -242,7 +253,7 @@
 					<div class="work-item-inner">
 						<img src="img/works/thumb/6.jpeg" data-large="img/works/large/6.jpeg" alt="work">
 						<div class="overlay">
-							<h4>Portrait Photography</h4>
+							<h4></h4>
 						</div>
 					</div>
 				</div>
@@ -257,7 +268,7 @@
    <section class="contact-section" id="contact">
 	   <div class="container">
 		<div class="section-title">
-			<h1>Contact Me</h1>
+			<h1 data-i18n="Contact Me">Contact Me</h1>
 		</div>
 		<div class="row">
 			<div class="contact-img">
@@ -270,22 +281,22 @@
 				   <form class="form" method="get">
 					   <div class="row">
 						   <div class="left input-group">
-							   <label>Name</label>
+							   <label data-i18n="Name">Name</label>
 							   <input type="text" placeholder="Your Name Here" class="input-control">
 						   </div>
 						   <div class="right input-group">
-							   <label>Email or Phone</label>
+							   <label data-i18n="Email or Phone">Email or Phone</label>
 							   <input type="text" placeholder="Your Email or Phone Here" class="input-control">
 						   </div>
 					   </div>
 					   <div class="row">
 						   <div class="input-group">
-							   <label>Message</label>
+							   <label data-i18n="Message">Message</label>
 							   <textarea class="input-control" placeholder="Your Message Here"></textarea>
 						   </div>
 					   </div>
 					   <div class="form-btn">
-						   <button type="submit" class="btn btn-01">Send Message</button>
+						   <button type="submit" class="btn btn-01" data-i18n="Send Message">Send Message</button>
 					   </div>
 				   </form>
 			   </div>
@@ -295,19 +306,19 @@
 				   <div class="row">
 					   <!-- info item start -->
 					   <div class="info-item">
-						   <h5>Address</h5>
+						   <h5 data-i18n="Address">Address</h5>
 						   <p>📍Holon Sheshet Ha-Yamim 29</p>
 					   </div>
 					   <!-- info item end -->
 					   <!-- info item start -->
 					   <div class="info-item">
-						   <h5>Phone</h5>
-						   <p>+972 52 457 0788</p>
+						   <h5 data-i18n="Phone">Phone</h5>
+						   <p>052 457 0788</p>
 					   </div>
 					   <!-- info item end -->
 					   <!-- info item start -->
 					   <div class="info-item">
-						   <h5>Email</h5>
+						   <h5 data-i18n="Email">Email</h5>
 						   <p>bonisergeeva@gmail.com</p>
 					   </div>
 					   <!-- info item end -->
@@ -360,5 +371,6 @@
  
 <script src="js/jquery.min.js"></script>
 <script src="js/main.js"></script>
+
 </body>
 </html>
