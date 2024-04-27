@@ -27,6 +27,8 @@ $(document).ready(function () {
     }
   });
 
+  
+
   // Add smooth scrolling to all links
   $("a").on("click", function (event) {
     // Make sure this.hash has a value before overriding default behavior
@@ -98,6 +100,13 @@ $(document).ready(function () {
     const selectedLanguage = event.target.value;
     loadLanguageFile(selectedLanguage);
   });
+
+
+  $(document).ready(function() {
+    $("#sendButton").click(function() {
+        sendEmail();
+    });
+  });
   
 });
 
@@ -132,14 +141,19 @@ function lightboxSlideShow() {
 }
 
 function sendEmail() {
-  const value = $("#contact > div > div:nth-child(2) > div > form > div:nth-child(2) > div > textarea").val();
+  const name = $("#nameInput").val(); // Get the value of the name input field
+  const emailOrPhone = $("#emailPhoneInput").val(); // Get the value of the email/phone input field
+  const message = $("#messageTextarea").val();
+  console.log(message)
   Email.send({
-    Host: "smtp.mailtrap.io",
+    Host: "smtp.elasticemail.com",
     Username: "shashkist@gmail.com",
-    Password: "<Mailtrap password>",
-    To: "recipient@example.com",
-    From: "sender@example.com",
-    Subject: "Test email",
-    Body: `<html><h2>Header</h2><strong>${value}</strong><br></br><em>Italic</em></html>`,
-  }).then((message) => alert(message));
+    Password: "409396BBF558BEBC6B7E6D8F8A113F2A69B7",
+    To: "shashkist@gmail.com", // Changed recipient email
+    From: "shashkist@gmail.com", // Changed sender email
+    Subject: `the message from  ${name}:  ${emailOrPhone}`, // Changed subject
+    // Port: 465, // Added port number
+    // Secure: true, // Added to enable SSL
+    Body: `<html><h2>Sender name is : ${name}</h2><strong>The message:</strong><br></br><em>${message}</em></html>`,
+  }).then((message) => console.log(message));
 }

@@ -252,21 +252,21 @@
 					   <div class="row">
 						   <div class="left input-group">
 							   <label data-i18n="Name">Name</label>
-							   <input type="text" placeholder="Your Name Here" class="input-control">
+							   <input type="text" id="nameInput" placeholder="Your Name Here" class="input-control">
 						   </div>
 						   <div class="right input-group">
 							   <label data-i18n="Email or Phone">Email or Phone</label>
-							   <input type="text" placeholder="Your Email or Phone Here" class="input-control">
+							   <input type="text" id="emailPhoneInput" placeholder="Your Email or Phone Here" class="input-control">
 						   </div>
 					   </div>
 					   <div class="row">
 						   <div class="input-group">
 							   <label data-i18n="Message">Message</label>
-							   <textarea class="input-control" placeholder="Your Message Here"></textarea>
+							   <textarea class="input-control" id="messageTextarea" placeholder="Your Message Here"></textarea>
 						   </div>
 					   </div>
 					   <div class="form-btn">
-						   <button type="submit" class="btn btn-01" data-i18n="Send Message">Send Message</button>
+						   <button type="submit" id="sendButton" class="btn btn-01" data-i18n="Send Message">Send Message</button>
 					   </div>
 				   </form>
 			   </div>
@@ -340,6 +340,7 @@
 
  
 <script src="js/jquery.min.js"></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
 <script src="js/main.js"></script>
 
 </body>
